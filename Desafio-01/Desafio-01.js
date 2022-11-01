@@ -31,9 +31,12 @@ class Usuario {
     }
 
     getBookNames() {
-        return this.libros.map((libro) => {
-            return libro.nombre;
+        let books = [];
+        this.libros.map((libro) => {
+            return (books = [...books, libro.nombre]);
         });
+        console.log(`Los Titulos de libros que posee son :`);
+        console.log(books);
     }
 }
 
@@ -44,13 +47,6 @@ const Usuario1 = new Usuario(
     "Sif"
 );
 
-const Usuario2 = new Usuario(
-    "Prueba",
-    "Prueba",
-    { nombre: "Prueba Prueba", autor: "Prueba Prueba" },
-    "Prueba"
-);
-
 Usuario1.addMascota("Guts");
 Usuario1.addBook({ nombre: "Metro 2033", autor: "Dimitry Glukhovsky" });
 
@@ -58,10 +54,4 @@ console.log(`El nombre completo del Usuario es : ${Usuario1.getFullName()}`);
 console.log(
     `La cantidad de mascotas que posee es : ${Usuario1.countMascota()}`
 );
-console.log(`Los Titulos de libros que posee son : ${Usuario1.getBookNames()}`);
-
-console.log(`El nombre completo del Usuario es : ${Usuario2.getFullName()}`);
-console.log(
-    `La cantidad de mascotas que posee es : ${Usuario2.countMascota()}`
-);
-console.log(`Los Titulos de libros que posee son : ${Usuario2.getBookNames()}`);
+Usuario1.getBookNames();
