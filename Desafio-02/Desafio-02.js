@@ -213,7 +213,6 @@ Price:${obj.price}
                 );
 
                 await fs.writeFileSync("products.txt", newData2);
-                console.log(ubiacion1);
             }
         } catch (error) {
             console.log(error);
