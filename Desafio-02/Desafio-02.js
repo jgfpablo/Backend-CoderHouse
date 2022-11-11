@@ -98,10 +98,10 @@ class Contenedor {
     }
 }
 const Prueba = new Contenedor();
-// Prueba.save({ title: "cafe-moka", price: "240" });
+Prueba.save({ title: "cafe-moka", price: "240" });
 // Prueba.save({ title: "cappucino", price: "200" });
 // Prueba.save({ title: "americano", price: "150" });
 // Prueba.getById(3);
 // Prueba.getAll();
 // Prueba.deleteById(1);
-Prueba.deleteAll();
+// Prueba.deleteAll();
